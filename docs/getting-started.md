@@ -1,4 +1,4 @@
-# Kalliope quick start
+# Getting started with Kalliope
 
 Kalliope needs two files to works, a `settings.yml` and a `brain.yml`.
 As files are written on YAML syntax, we strongly recommend you to use an editor(IDE) like [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/).
@@ -11,6 +11,7 @@ Those repositories provide you a structure to start playing and learning basics 
 Download the starter kit of your choice and open the folder with your IDE.
 
 When you start kalliope using the CLI (`kalliope start`), the program will try to load your `settings.yml` and `brain.yml` in the following order:
+
 - From your current folder, E.g `/home/pi/my_kalliope/settings.yml`
 - From `/etc/kalliope/settings.yml`
 - From the default `settings.yml`. You can take a look into the default [`settings.yml`](../kalliope/settings.yml) file which is located in the root of the project tree.
@@ -53,7 +54,6 @@ Waiting for trigger detection
 Then speak the hotwork out loud to wake up Kalliope (with the right pronunciation depending on your starter kit. "Kalliopé" in french, "Kalliopee" in English).
 If the trigger is successfully raised, you'll see "say something" into the console.
 ```bash
-2016-12-05 20:54:21,950 :: INFO :: Keyword 1 detected at time: 2016-12-05 20:54:21
 Say something!
 ```
 

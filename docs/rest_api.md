@@ -2,34 +2,6 @@
 
 Kalliope provides the REST API to manage the synapses. For configuring the API refer to the [settings documentation](settings.md).
 
-- [Rest API](#rest-api)
-  - [API ref](#api-ref)
-  - [Get Kalliope's version](#get-kalliopes-version)
-  - [Brain](#brain)
-    - [List synapses](#list-synapses)
-    - [Show synapse details](#show-synapse-details)
-    - [Run a synapse by its name](#run-a-synapse-by-its-name)
-    - [Run a synapse from an order](#run-a-synapse-from-an-order)
-    - [Run a synapse from an audio file](#run-a-synapse-from-an-audio-file)
-  - [The neurotransmitter case](#the-neurotransmitter-case)
-  - [Settings](#settings)
-    - [Get current settings](#get-current-settings)
-    - [Deaf](#deaf)
-      - [Get deaf status](#get-deaf-status)
-      - [Switch deaf status](#switch-deaf-status)
-    - [Mute](#mute)
-      - [Get mute status](#get-mute-status)
-      - [Set mute status](#set-mute-status)
-    - [energy_threshold](#energy-threshold)
-      - [Get energy_threshold status](#get-energy-threshold-status)
-      - [Set energy_threshold status](#set-energy-threshold-status)
-    - [Variables](#variables)
-      - [Get variables list](#get-variables-list)
-      - [Update Variables](#update-variables)
-    - [default tts, stt, player, trigger](#default-tts--stt--player--trigger)
-      - [Get](#get)
-      - [Update](#update)
-
 ## API ref
 
 | Method | URL                               | Action                             |
@@ -452,152 +424,152 @@ Output example:
 ```JSON
 {
   "settings": {
-    "cache_path": "/tmp/kalliope_tts_cache", 
-    "default_player_name": "mplayer", 
-    "default_stt_name": "google", 
-    "default_trigger_name": "snowboy", 
-    "default_tts_name": "pico2wave", 
+    "cache_path": "/tmp/kalliope_tts_cache",
+    "default_player_name": "mplayer",
+    "default_stt_name": "google",
+    "default_trigger_name": "snowboy",
+    "default_tts_name": "pico2wave",
     "hooks": {
-      "on_deaf": null, 
-      "on_mute": null, 
-      "on_order_found": null, 
-      "on_order_not_found": "order-not-found-synapse", 
-      "on_processed_synapses": null, 
-      "on_start": "on-start-synapse", 
-      "on_start_listening": null, 
-      "on_start_speaking": null, 
-      "on_stop_listening": null, 
-      "on_stop_speaking": null, 
-      "on_stt_error": null, 
-      "on_triggered": "on-triggered-synapse", 
-      "on_undeaf": null, 
-      "on_unmute": null, 
+      "on_deaf": null,
+      "on_mute": null,
+      "on_order_found": null,
+      "on_order_not_found": "order-not-found-synapse",
+      "on_processed_synapses": null,
+      "on_start": "on-start-synapse",
+      "on_start_listening": null,
+      "on_start_speaking": null,
+      "on_stop_listening": null,
+      "on_stop_speaking": null,
+      "on_stt_error": null,
+      "on_triggered": "on-triggered-synapse",
+      "on_undeaf": null,
+      "on_unmute": null,
       "on_waiting_for_trigger": null
-    }, 
-    "kalliope_version": "0.5.1b", 
-    "machine": "x86_64", 
+    },
+    "kalliope_version": "0.5.1b",
+    "machine": "x86_64",
     "options": {
-      "adjust_for_ambient_noise_second": 0, 
-      "deaf": false, 
-      "energy_threshold": 4000, 
-      "mute": false, 
-      "name": "Options", 
+      "adjust_for_ambient_noise_second": 0,
+      "deaf": false,
+      "energy_threshold": 4000,
+      "mute": false,
+      "name": "Options",
       "stt_timeout": 0
-    }, 
+    },
     "players": [
       {
-        "name": "mplayer", 
+        "name": "mplayer",
         "parameters": {}
-      }, 
+      },
       {
-        "name": "pyalsaaudio", 
+        "name": "pyalsaaudio",
         "parameters": {
-          "convert_to_wav": true, 
+          "convert_to_wav": true,
           "device": "default"
         }
-      }, 
+      },
       {
-        "name": "pyaudioplayer", 
+        "name": "pyaudioplayer",
         "parameters": {
           "convert_to_wav": true
         }
-      }, 
+      },
       {
-        "name": "sounddeviceplayer", 
+        "name": "sounddeviceplayer",
         "parameters": {
           "convert_to_wav": true
         }
       }
-    ], 
+    ],
     "resources": {
-      "neuron_folder": null, 
-      "signal_folder": null, 
-      "stt_folder": null, 
-      "trigger_folder": null, 
+      "neuron_folder": null,
+      "signal_folder": null,
+      "stt_folder": null,
+      "trigger_folder": null,
       "tts_folder": null
-    }, 
+    },
     "rest_api": {
-      "active": true, 
-      "allowed_cors_origin": false, 
-      "login": "admin", 
-      "password": "secret", 
-      "password_protected": true, 
+      "active": true,
+      "allowed_cors_origin": false,
+      "login": "admin",
+      "password": "secret",
+      "password_protected": true,
       "port": 5000
-    }, 
+    },
     "stts": [
       {
-        "name": "google", 
+        "name": "google",
         "parameters": {
           "language": "fr-FR"
         }
-      }, 
+      },
       {
-        "name": "wit", 
+        "name": "wit",
         "parameters": {
           "key": "fakekey"
         }
-      }, 
+      },
       {
-        "name": "bing", 
+        "name": "bing",
         "parameters": {
           "key": "fakekey"
         }
-      }, 
+      },
       {
-        "name": "apiai", 
+        "name": "apiai",
         "parameters": {
-          "key": "fakekey", 
+          "key": "fakekey",
           "language": "fr"
         }
-      }, 
+      },
       {
-        "name": "houndify", 
+        "name": "houndify",
         "parameters": {
-          "client_id": "fakeclientid", 
+          "client_id": "fakeclientid",
           "key": "fakekey"
         }
       }
-    ], 
+    ],
     "triggers": [
       {
-        "name": "snowboy", 
+        "name": "snowboy",
         "parameters": {
           "pmdl_file": "trigger/snowboy/resources/kalliope-FR-40samples.pmdl"
         }
       }
-    ], 
+    ],
     "ttss": [
       {
-        "name": "pico2wave", 
+        "name": "pico2wave",
         "parameters": {
-          "cache": true, 
+          "cache": true,
           "language": "fr-FR"
         }
-      }, 
+      },
       {
-        "name": "googletts", 
+        "name": "googletts",
         "parameters": {
-          "cache": true, 
+          "cache": true,
           "language": "fr"
         }
-      }, 
+      },
       {
-        "name": "voicerss", 
+        "name": "voicerss",
         "parameters": {
-          "cache": true, 
-          "key": "API_Key", 
+          "cache": true,
+          "key": "API_Key",
           "language": "fr-fr"
         }
-      }, 
+      },
       {
-        "name": "watson", 
+        "name": "watson",
         "parameters": {
-          "password": "password", 
-          "username": "me", 
+          "password": "password",
+          "username": "me",
           "voice": "fr-FR_ReneeVoice"
         }
       }
-    ], 
+    ],
     "variables": {}
   }
 }
@@ -685,7 +657,7 @@ Output example:
 
 ### energy_threshold
 
-Define the [energy_threshold](settings.md) in the settigns 
+Define the [energy_threshold](settings.md) in the settigns
 
 #### Get energy_threshold status
 
@@ -726,7 +698,7 @@ Output example:
 
 ### Variables
 
-#### Get variables list 
+#### Get variables list
 
 Normal response codes: 200
 Error response codes : unauthorized(401), Bad request(400)
@@ -741,7 +713,7 @@ Output example:
 ```JSON
 {
   "variables": {
-    "my_variable": "blabla", 
+    "my_variable": "blabla",
     "nickname": "monf"
   }
 }
@@ -762,7 +734,7 @@ Output example:
 ```JSON
 {
   "variables": {
-    "my_variable ": "blabla", 
+    "my_variable ": "blabla",
     "nickname": "monf",
     "mysecondVariable": "SecondValue",
     "Nickname2": "Nico"
@@ -774,7 +746,7 @@ Output example:
 
 ### default tts, stt, player, trigger
 
-#### Get 
+#### Get
 
 Normal response codes: 200
 Error response codes : unauthorized(401), Bad request(400)

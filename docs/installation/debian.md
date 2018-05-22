@@ -33,6 +33,8 @@ Then, with pip, the last release of setuptools
 ```bash
 sudo pip install -U setuptools
 ```
+## Kalliope installation
 
-Then, follow the [main installation documentation](../installation.md).
+{!installation/manual_installation_common.md!}
 
+{!installation/check_env.md!}

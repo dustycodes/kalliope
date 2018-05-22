@@ -1,12 +1,11 @@
 # Kalliope requirements for Raspbian
 
-- [Kalliope requirements for Raspbian](#kalliope-requirements-for-raspbian)
-  - [Install via the pre-compiled disk image](#install-via-the-pre-compiled-disk-image)
-  - [Manual installation](#manual-installation)
-    - [Debian packages requirements](#debian-packages-requirements)
-  - [Raspberry Pi configuration](#raspberry-pi-configuration)
-    - [Microphone configuration](#microphone-configuration)
-    - [HDMI / Analog audio](#hdmi-analog-audio)
+Kalliope can be installed:
+
+- [Via the pre-compiled disk image](#install-via-the-pre-compiled-disk-image)
+- [Via script](#install-via-script)
+- [Manually](#manual-installation)
+
 
 ## Install via the pre-compiled disk image
 
@@ -19,15 +18,15 @@ Once installed, use the `raspi-config` command to expand the file system and fil
 The SSH server is enable by default. Get the IP of your Rpi via the command `ip a` and then connect via your favourite SSH client.
 The two starter config files are located in `/home/pi` for [French](https://github.com/kalliope-project/kalliope_starter_fr), [English](https://github.com/kalliope-project/kalliope_starter_en) and [German](https://github.com/kalliope-project/kalliope_starter_de).
 
+
+## Install via script
+
+Just run the following bash command to install Kalliope on a freshly installed Raspberry Pi:
+```
+bash -c "$(curl -sL https://raw.githubusercontent.com/kalliope-project/kalliope/master/install/rpi_install_kalliope.sh)"
+```
+
 ## Manual installation
-
-Supported Raspbian images:
-- [raspbian-2016-09-28](http://downloads.raspberrypi.org/raspbian/images/raspbian-2016-09-28/) (Jessie based)
-- [raspbian-2016-11-29](http://downloads.raspberrypi.org/raspbian/images/raspbian-2016-11-29/) (Jessie based)
-- [raspbian-2017-01-10](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-01-10/) (Jessie based)
-- [raspbian-2017-04-10](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-04-10/) (Jessie based)
-- [raspbian-2017-08-16](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-04-10/) (Strech based)
-
 
 > **Note:** It is recommended to use a **lite** installation of Raspbian without any graphical interface for a better experience.
 
@@ -47,6 +46,8 @@ Install the last release of python-pip:
 wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 ```
+
+{!installation/manual_installation_common.md!}
 
 ## Raspberry Pi configuration
 
@@ -156,4 +157,4 @@ Check the [official documentation](https://www.raspberrypi.org/documentation/con
 sudo raspi-config
 ```
 
-Then follow the [main installation documentation](../installation.md).
+{!installation/check_env.md!}

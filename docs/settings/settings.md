@@ -2,28 +2,6 @@
 
 This part of the documentation explains the main configuration of Kalliope placed in the `settings.md` file.
 
-- [Kalliope settings](#kalliope-settings)
-  - [Triggers configuration](#triggers-configuration)
-    - [default_trigger](#default-trigger)
-    - [triggers](#triggers)
-  - [Players configuration](#players-configuration)
-    - [default_player](#default-player)
-    - [players](#players)
-  - [Speech to text configuration](#speech-to-text-configuration)
-    - [default_speech_to_text](#default-speech-to-text)
-    - [speech_to_text](#speech-to-text)
-  - [Text to speech configuration](#text-to-speech-configuration)
-    - [default_text_to_speech](#default-text-to-speech)
-    - [text_to_speech](#text-to-speech)
-  - [Hooks](#hooks)
-  - [Rest API](#rest-api)
-  - [Resources directory](#resources-directory)
-  - [Global Variables](#global-variables)
-  - [Options](#options)
-    - [energy_threshold](#energy-threshold)
-    - [adjust_for_ambient_noise_second](#adjust-for-ambient-noise-second)
-  - [Next: configure the brain of Kalliope](#next--configure-the-brain-of-kalliope)
-
 ## Triggers configuration
 
 ### default_trigger

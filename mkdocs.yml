@@ -1,0 +1,31 @@
+# how to use
+# install python packages
+# sudo pip install mkdocs mkdocs-material markdown-include
+# run dev server
+# mkdocs serve
+
+site_name: Kalliope doc
+dev_addr: 0.0.0.0:8000
+
+theme:
+  name: 'material'
+
+markdown_extensions:
+  - markdown_include.include:
+      base_path: docs
+
+pages:
+  - Home: "index.md"
+  - Installation:
+    - "Raspberry": "installation/raspbian.md"
+    - "Debian": "installation/debian.md"
+    - "Ubuntu": "installation/ubuntu.md"
+  - Getting-started: "getting-started.md"
+  - Settings:
+    - Settings.yml: "settings/settings.md"
+  - Brain:
+    - What is the brain: "brain/brain.md"
+    - Signals: "brain/signals.md"
+    - Neurons: "brain/neurons.md"
+  - CLI: "cli.md"
+  - API: "rest_api.md"

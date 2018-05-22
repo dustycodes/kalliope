@@ -1,12 +1,5 @@
 # Brain
 
-- [Brain](#brain)
-  - [What is the brain of Kalliope](#what-is-the-brain-of-kalliope)
-  - [Split the brain](#split-the-brain)
-  - [Manage synapses from the API](#manage-synapses-from-the-api)
-  - [Next: Start Kalliope](#next--start-kalliope)
-  - [Notes](#notes)
-
 ## What is the brain of Kalliope
 
 The brain is a main component of Kalliope. It's a module that gives a configuration of your own personal assistant and, so, determines it's behavior and fonctionnalities.
@@ -14,6 +7,7 @@ The brain is a main component of Kalliope. It's a module that gives a configurat
 Brain is composed by synapses: a synapse is the link between input(signals) and output actions(neurons).
 
 An input action, called a "[signal](signals.md)" can be:
+
 - **an order:** Something that has been spoke out loud by the user.
 - **an event:** A date or a frequency (E.G: repeat each morning at 8:30)
 - **a mqtt message** A message received on a MQTT topic
@@ -65,6 +59,7 @@ signals:
 You can add as many orders as you want for the signals. Even if literally they do not mean the same thing (For example order "say hello" and order "adventure" or whatever) as long they are in the same synapse, they will trigger the same action defined in neurons.
 
 Note that you are not limited by the exact sentence you put in your order. Kalliope uses the matching, it means that you can pronounce the sentence which contains your order (so, can be much longer) and it will launch an attached task anyway. In this example, the task attached to order "say hello" will be launched even if you say
+
 - "say hello Kalliope"
 - "Kalliope, say hello"
 - "I want you to say hello"
@@ -129,16 +124,3 @@ E.g:
 >**Note:** You can only use the `include` statement in the main brain file.
 
 >**Note:** the includes statement must start with a `-`
-
-## Manage synapses from the API
-
-Kalliope provides also a REST API to manage your synapses (get the list, get one, run one), refer to [rest api documentation](rest_api.md) for more details.
-
-## Next: Start Kalliope
-
-Now you take a look into the [CLI documentation](kalliope_cli.md) to learn how to start kalliope.
-
-## Notes
-- What is a [neuron](neurons.md)
-- What is a [signal](signals.md)
-

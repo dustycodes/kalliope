@@ -1,19 +1,5 @@
 # Kalliope Command-line interface
 
-- [Kalliope Command-line interface](#kalliope-command-line-interface)
-    - [SYNOPSIS](#synopsis)
-    - [ARGUMENTS](#arguments)
-        - [start](#start)
-        - [install](#install)
-    - [OPTIONS](#options)
-        - [-v or --version](#v-or---version)
-        - [--run-synapse SYNAPSE_NAME](#run-synapse-synapsename)
-        - [--run-order "Your Order"](#run-order-your-order)
-        - [--brain-file BRAIN_FILE](#brain-file-brainfile)
-        - [--deaf](#deaf)
-        - [--debug](#debug)
-        - [--git-url](#git-url)
-
 ## SYNOPSIS
 This is the syntax used to run Kalliope from command line
 ```bash
